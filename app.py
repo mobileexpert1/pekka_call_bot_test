@@ -132,10 +132,14 @@ def download_file(filename):
 def get_texml():
     print("Request received")
     texml_content = """<?xml version="1.0" encoding="UTF-8"?>
-    <Response>
-        <Say>Hello, this is a test message. You should hear this on the call.</Say>
-        <Hangup/>
-    </Response>"""
+  <!-- XML file setup above-->
+ <!-- The Response element wraps the body and is required -->
+<Response>
+     <!-- You don't need to issue an answer command, start with Say for text to speech -->
+    <Say>This is TeXML text to speech setup in seconds! The call will now hangup.</Say>
+    <!-- For this example, you want to hangup the call otherwise there will be silence -->
+    <Hangup />
+</Response>"""
 
     # Return the TeXML response
     return Response(texml_content, mimetype='application/xml')
