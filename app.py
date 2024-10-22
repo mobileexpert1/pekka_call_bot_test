@@ -130,7 +130,7 @@ def download_file(filename):
 
 @app.route('/texml', methods=['GET', "POST"])
 def get_texml():
-    print("Request received", request.json)
+    print("Request received")
     texml_content = """<?xml version="1.0" encoding="UTF-8"?>
     <Response>
         <Say>Hello, this is a test message. You should hear this on the call.</Say>
