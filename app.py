@@ -5,7 +5,6 @@ from datetime import datetime
 from dotenv import load_dotenv
 import threading
 import asyncio
-from utils import convert_mp3_to_wav, transcribe_audio
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'media'
